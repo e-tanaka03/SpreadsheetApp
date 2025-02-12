@@ -1,0 +1,93 @@
+
+body{
+    width: auto;
+    margin: auto;
+    font-size: 21px;
+    font-family:"ＭＳ Ｐ明朝", serif;
+}
+table {
+    width: auto;
+    margin: auto;
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+#Date{
+    font-size: 26px;
+    text-align: right;
+    vertical-align: bottom;
+    font-weight: bold;
+}
+#Time{
+    font-size: 15px;
+    text-align: left;
+    vertical-align: bottom;
+}
+#Title{
+    font-size: 30px;
+    font-weight: bold;
+}
+#Unit{
+    font-size: 15px;
+    text-align: right;
+    vertical-align: bottom;
+}
+.BorderTop{
+    border-top: solid 3px black;
+}
+.BorderTop-Bottom{
+    border-top: solid 1px #778ca3;
+    border-bottom: solid 3px black;
+}
+.BorderBottom{
+    border-bottom: solid 1px #778ca3;
+}
+.Header{
+    background: lime;
+}
+.Kadou{
+    font-size: 18px;
+}
+.BackColor-White{
+    background: white;
+}
+.BackColor-Blue{
+    background: #CCFFFF;
+}
+.SubTotal{
+    background: #fafab8a8;
+    border-bottom: solid 3px black;
+}
+.TextRight{
+    text-align: right;
+}
+.TextBold{
+    font-size: 24px;
+    font-weight: bold;
+}
+table tbody td {
+    padding: 5px;
+    border-right: solid 1px #778ca3;
+    border-left: solid 1px #778ca3;
+}
+table tfoot td {
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-right: solid 1px #778ca3;
+    border-left: solid 1px #778ca3;
+}
+.BorderLeft{
+    border-left: solid 3px black;
+}
+.BorderRight{
+    border-right: solid 3px black;
+}
+.Total{
+    background: #FFFF99;
+    border-bottom: solid 3px black;
+}
+.bottom-space {
+    margin-bottom: 30px;
+}

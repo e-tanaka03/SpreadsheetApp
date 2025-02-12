@@ -1,0 +1,148 @@
+/*ボタン*/
+
+.button {
+    background-color: #E0FFFF;
+    color:#444444;
+    font-size: 240%;
+    padding: 10px;
+    text-decoration: none;
+    margin-top:20px;
+}
+.button:hover {
+    background-color: #59b1eb;
+}
+
+.button::before,
+.button::after {
+    position: absolute;
+    z-index: -1;
+    display: block;
+    content: '';
+}
+
+.button,
+.button::before,
+.button::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+/*ボタン2*/
+
+.button2 {
+    background-color: #E0FFFF;
+    color:#444444;
+    font-size: 165%;
+    padding: 10px;
+    text-decoration: none;
+    margin-top:20px;
+}
+.button2:hover {
+    background-color: #59b1eb;
+}
+
+.button2::before,
+.button2::after {
+    position: absolute;
+    z-index: -1;
+    display: block;
+    content: '';
+}
+
+.button2,
+.button2::before,
+.button2::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+/*body*/
+
+header {
+    padding: 0px;
+    color:#444444;
+    font-size: 150%;
+    text-align: left;
+    font-weight:bold;
+    text-decoration: underline;
+    font-family: "UD デジタル 教科書体 N-R", "BIZ UDゴシック Regular", "Hiragino Kaku Gothic ProN", "ascii";
+}
+
+body {
+    background-color:#E0FFFF;
+    text-align: center;
+    font-weight:bold;
+    line-height:55px;
+    font-family: "UD デジタル 教科書体 N-R", "BIZ UDゴシック Regular", "Hiragino Kaku Gothic ProN", "ascii";
+}
+
+a#header {
+    color:#444444;
+    text-decoration: none;
+}
+
+h1 {
+    background-color:#0381AB;     /*----背景色-----*/
+    color:#ffffff;      /*----文字色-----*/
+    font-weight:bold;     /*----太文字-----*/
+    font-size:30px;     /*----文字サイズ-----*/
+    padding:6px 8px;
+    margin-top:5px;
+}
+
+footer {
+    clear:both;
+    font-size:12px;
+    text-align:Center;  /*---中央表示--------*/
+    background-color:#004B7A;     /*----背景色-----*/
+    color:#ffffff;      /*----文字色-----*/
+    line-height:30px;
+    font-family: "UD デジタル 教科書体 N-R", "BIZ UDゴシック Regular", "Hiragino Kaku Gothic ProN", "ascii";
+}
+
+.bottom-space {
+    margin-bottom: 20px;
+}
+
+.top-space {
+    margin-top: 25px;
+}
+
+table {
+    width: auto;
+    margin: auto;
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.Name{
+    font-size: 270%;
+    color:#444444;
+}
+
+.Today{
+    color:#1c05f3;
+}
+
+.Yesterday{
+    color:#4785f8;
+}
+
+.TwoDayBefore{
+    color:#69bef7;
+}
+
+.bottom-space2 {
+    margin-bottom: 50px;
+}
+
+.top-space2 {
+    margin-top: 50px;
+}

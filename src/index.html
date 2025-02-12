@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=400, user-scalable=no, shrink-to-fit=no">
+    <title>認証</title>
+    <link href="css/common.css?20240603" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+    <h1>Spreadsheet App</h1>
+    <div>ＩＤとパスワードを入力して下さい</div>
+    <form name="form" onsubmit="return checkIDPW()" method="POST">
+        <div>ＩＤ</div>
+        <div class="bottom-space"><input type=text autocomplete="off" value="" size=20 name=id style=ime-mode:disabled id="id"></div>
+        <div>パスワード</div>
+        <div class="bottom-space2"><input type=password value="" size=20 maxlength=12 name=pw id="pw"></div>
+        <div class="top-space2 bottom-space2"><input type=submit value="　　　ログイン　　　"></div>
+    </form>
+
+    <footer>Copyright (C) 2024 - <script language="javascript">document.write(new Date().getFullYear())</script> Eita Tanaka All Rights Reserved.</footer>
+
+    <script src="js/index.js?20240603"></script>
+</body>
+</html>
