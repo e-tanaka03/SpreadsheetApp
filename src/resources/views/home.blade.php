@@ -20,8 +20,8 @@
 @section('contents')
 <h1>全店舗集計</h1>
 <div class="bottom-space top-space">
-    <a class="button" href="{{ route('syukei.today')}}">本日データ</a>
-    <a class="button" href="{{ route('syukei.yesterday')}}">前日データ</a>
+    <a class="button" href="{{ route('syukei.today') }}">本日データ</a>
+    <a class="button" href="{{ route('syukei.yesterday') }}">前日データ</a>
 </div>
 
 <h1>店舗別データ</h1>
@@ -78,14 +78,14 @@
 
 <h1>売上各種集計表</h1>
 <div class="bottom-space top-space">
-    <font size="2"><a class="button" href="./Hyou_106.html">期間売上(1日平均比較)</a></font>
+    <font size="2"><a class="button" href="{{ route('kikan.month') }}">期間売上(1日平均比較)</a></font>
 </div>
-<!-- <div class="bottom-space top-space"> -->
-    <!-- <font size="2"><a class="button bottom-space top-space" href="./Hyou_106Q.html">期間売上_四半期(1日平均比較)</a></font> -->
-<!-- </div> -->
-<!-- <div class="bottom-space top-space"> -->
-    <!-- <font size="2"><a class="button bottom-space top-space" href="./Hyou_106Y.html">期間売上_当期(1日平均比較)</a></font> -->
-<!-- </div> -->
+<div class="bottom-space top-space">
+    <font size="2"><a class="button bottom-space top-space" href="{{ route('kikan.quater') }}">期間売上_四半期(1日平均比較)</a></font>
+</div>
+<div class="bottom-space top-space">
+    <font size="2"><a class="button bottom-space top-space" href="{{ route('kikan.year') }}">期間売上_当期(1日平均比較)</a></font>
+</div>
 
 <script language="javascript">
     //今日
@@ -114,17 +114,17 @@
         document.write("<div class=bottom-space top-space>");
         document.write("<font size=2><a class=button href=./Menu41/UriageReport"+yYear2+yMonth2+yDate2+".html>売上状況報告書("+yMonth2+"/"+yDate2+")</a></font>");
         document.write("</div>");
-        // document.write("<div class=bottom-space top-space>");
-        // document.write("<font size=2><a class=button href=./Menu41/UriageReportQ"+yYear2+yMonth2+yDate2+".html>売上状況報告書_四半期("+yMonth2+"/"+yDate2+")</a></font>");
-        // document.write("</div>");
+        document.write("<div class=bottom-space top-space>");
+        document.write("<font size=2><a class=button href=./Menu41/UriageReportQ"+yYear2+yMonth2+yDate2+".html>売上状況報告書_四半期("+yMonth2+"/"+yDate2+")</a></font>");
+        document.write("</div>");
     }
     else{
         document.write("<div class=bottom-space top-space>");
         document.write("<font size=2><a class=button href=./Menu41/UriageReport"+yYear+yMonth+yDate+".html>売上状況報告書("+yMonth+"/"+yDate+")</a></font>");
         document.write("</div>");
-        // document.write("<div class=bottom-space top-space>");
-        // document.write("<font size=2><a class=button href=./Menu41/UriageReportQ"+yYear+yMonth+yDate+".html>売上状況報告書_四半期("+yMonth+"/"+yDate+")</a></font>");
-        // document.write("</div>");
+        document.write("<div class=bottom-space top-space>");
+        document.write("<font size=2><a class=button href=./Menu41/UriageReportQ"+yYear+yMonth+yDate+".html>売上状況報告書_四半期("+yMonth+"/"+yDate+")</a></font>");
+        document.write("</div>");
     }
 
 </script>
