@@ -1,3 +1,14 @@
+@php
+$eigyobu_num = [0, 0, 0, 0];
+$eigyobu_name = ["第\n一\n営\n業\n部", "第\n二\n営\n業\n部", 
+                 "第\n三\n営\n業\n部", "第\n四\n営\n業\n部"];
+$backcolor = ['BackColor-White', 'BackColor-Blue'];
+$daiNeigyo = 0;
+
+foreach($periodsales as $periodsale){
+    $eigyobu_num[((int)(($periodsale->store_id)/100))-1]++;
+}
+@endphp
 <!--
 *   extends：親ビューを継承する（読み込む）
 *   親ビュー名：layout を指定
@@ -77,6 +88,45 @@
             <td>平均差異</td>
             <td>累計差異</td>
         </tr>
+
+        @foreach($periodsales as $periodsale)
+            <tr>
+                @if($daiNeigyo < (int)(($periodsale->store_id)/100))
+                    <!-- 営業部名 -->
+                    <td rowspan="{{ $eigyobu_num[$daiNeigyo] }}" class="BackColor-Green BorderLeft">{{ $eigyobu_name[$daiNeigyo] }}</td>
+                    @php
+                        $daiNeigyo++;
+                    @endphp 
+                @endif
+
+                <!-- 店名 -->
+                <td>{{ $periodsale->store_name }}</td>
+                <!-- 客粗利 -->
+                <td class="TextRight BorderRight-thin">{{ round( $periodsale->data2 / $periodsale->data3 ) }}</td>
+                <!-- 目標売上 -->
+                <td class="TextRight">{{ round( $periodsale->data5 ) }}</td>
+                <!-- 実績売上 -->
+                <td class="TextRight">{{ round( $periodsale->data1 / $periodsale->data4 ) }}</td>
+                <!-- 達成率 -->
+                @php
+                    $achievement_rate = (($periodsale->data1 / $periodsale->data4) / $periodsale->data5) * 1000;
+                @endphp
+                <td class="TextRight">{{ (round($achievement_rate)) / 10 }}%</td>
+                <!-- 平均差異 -->
+                @if(($periodsale->data1 / $periodsale->data4) - $periodsale->data5 > 0)
+                    <td class="TextRight">{{ round( ($periodsale->data1 / $periodsale->data4) - $periodsale->data5 ) }}</td>
+                @else
+                    <td class="TextRight TextColor-Red">{{ round( ($periodsale->data1 / $periodsale->data4) - $periodsale->data5 ) }}</td>
+                @endif
+                <!-- 累計差異 -->
+                @if(($periodsale->data1 / $periodsale->data4) - $periodsale->data5 > 0)
+                    <td class="TextRight">{{ round( (($periodsale->data1 / $periodsale->data4) - $periodsale->data5) * $periodsale->data4 ) }}</td>
+                @else
+                    <td class="TextRight TextColor-Red">{{ round( (($periodsale->data1 / $periodsale->data4) - $periodsale->data5) * $periodsale->data4 ) }}</td>
+                @endif
+                    
+            </tr>
+        @endforeach
     </tbody>
 
     <tfoot id="tfoot"></tfoot>
@@ -115,5 +165,5 @@
 *   セクション名：scripts を指定
 -->
 @section('scripts')
-<script src="js/Hyou_106.js"></script>
+<!-- <script src="js/Hyou_106.js"></script> -->
 @endsection
